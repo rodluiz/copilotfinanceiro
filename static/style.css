@@ -1,0 +1,27 @@
+body {
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #1f2937;
+  margin: 0;
+  padding: 0 12px 40px;
+}
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.06);
+  padding: 16px;
+  margin: 12px auto;
+  max-width: 880px;
+}
+label { display:block; margin-top:8px; }
+input[type="text"], input[type="number"], input[type="file"] { width:100%; padding:8px; margin-top:6px; }
+.row { margin-top:12px; }
+button, .button { background:#2563eb; color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; text-decoration:none; }
+table{ width:100%; border-collapse:collapse; margin-top:8px; }
+table th, table td{ text-align:left; padding:8px; border-bottom:1px solid #eee }
+pre.llm{ background:#0f172a; color:#e6eef8; padding:12px; border-radius:6px; overflow:auto }
+footer{ margin-top:24px; text-align:center; color:#6b7280 }

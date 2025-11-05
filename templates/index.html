@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h2>Enviar extrato</h2>
+    <form action="/statement" method="post" enctype="multipart/form-data">
+      <label for="file">Arquivo (CSV ou PDF):</label>
+      <input type="file" id="file" name="file" accept=".csv,.pdf" required>
+      <div class="row">
+        <button type="submit">Enviar e Analisar</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Análise de mercado (exemplo)</h2>
+    <form action="/analysis" method="get">
+      <label for="symbol">Símbolo:</label>
+      <input id="symbol" name="symbol" value="IBM">
+      <label for="steps">Passos de previsão:</label>
+      <input id="steps" name="steps" type="number" value="5" min="1" max="30">
+      <div class="row">
+        <button type="submit">Executar análise</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Busca de preço</h2>
+    <form action="/fetch" method="get">
+      <label for="symbol2">Símbolo:</label>
+      <input id="symbol2" name="symbol" value="IBM">
+      <div class="row">
+        <button type="submit">Buscar</button>
+      </div>
+    </form>
+  </section>
+
+{% endblock %}

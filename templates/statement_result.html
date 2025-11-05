@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h2>Resultado da Análise do Extrato</h2>
+    <p><strong>Total gasto:</strong> R$ {{ total_spent }}</p>
+    <p><strong>Renda detectada:</strong> R$ {{ income }}</p>
+
+    <h3>Resumo por categoria</h3>
+    {% if category_summary %}
+    <table>
+      <thead><tr><th>Categoria</th><th>Total (R$)</th></tr></thead>
+      <tbody>
+        {% for row in category_summary %}
+        <tr><td>{{ row.category }}</td><td>{{ "%.2f"|format(row.total_spent) }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <p>Nenhuma despesa detectada.</p>
+    {% endif %}
+
+    <h3>Sugestões (regras)</h3>
+    <ul>
+      {% for s in rule_suggestions %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if llm_suggestion %}
+    <h3>Complemento gerado pelo LLM</h3>
+    <pre class="llm">{{ llm_suggestion }}</pre>
+    {% endif %}
+
+    <div class="row">
+      <a class="button" href="/">Voltar</a>
+    </div>
+  </section>
+
+{% endblock %}

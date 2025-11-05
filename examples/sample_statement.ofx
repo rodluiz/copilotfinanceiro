@@ -1,0 +1,47 @@
+OFXHEADER:100
+DATA:OFXSGML
+
+<OFX>
+  <SIGNONMSGSRSV1>
+    <SONRS>
+      <STATUS>
+        <CODE>0</CODE>
+        <SEVERITY>INFO</SEVERITY>
+      </STATUS>
+      <DTSERVER>20251001</DTSERVER>
+      <LANGUAGE>POR</LANGUAGE>
+    </SONRS>
+  </SIGNONMSGSRSV1>
+  <BANKMSGSRSV1>
+    <STMTTRNRS>
+      <STMTRS>
+        <BANKACCTFROM>
+          <BANKID>123</BANKID>
+          <ACCTID>000111222</ACCTID>
+          <ACCTTYPE>CHECKING</ACCTTYPE>
+        </BANKACCTFROM>
+        <BANKTRANLIST>
+          <STMTTRN>
+            <TRNTYPE>DEPOSIT</TRNTYPE>
+            <DTPOSTED>20251001</DTPOSTED>
+            <TRNAMT>5000.00</TRNAMT>
+            <NAME>Salario</NAME>
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>DEBIT
+</TRNTYPE>
+            <DTPOSTED>20251003</DTPOSTED>
+            <TRNAMT>-320.45</TRNAMT>
+            <NAME>Supermercado XYZ</NAME>
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>DEBIT</TRNTYPE>
+            <DTPOSTED>20251005</DTPOSTED>
+            <TRNAMT>-29.90</TRNAMT>
+            <NAME>NETFLIX</NAME>
+          </STMTTRN>
+        </BANKTRANLIST>
+      </STMTRS>
+    </STMTTRNRS>
+  </BANKMSGSRSV1>
+</OFX>

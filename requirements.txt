@@ -1,0 +1,10 @@
+requests
+pandas
+openai
+flask
+statsmodels
+matplotlib
+python-dotenv
+pdfplumber
+reportlab
+ofxparse
